@@ -1,0 +1,445 @@
+@font-face {
+	font-family: Eau;
+	src: url('../assets/fonts/eau_sans_bold.otf');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Eau;
+	src: url('../assets/fonts/eau_sans_book.otf');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: none;
+	overflow-x: hidden;
+}
+
+p {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+img { border-radius: 10px; }
+
+div.light { background-color: white; }
+div.light h1, div.light h2, div.light h3, div.light h4, div.light h5, div.light h6 { color: #0F6688; }
+div.light p, div.light a, div.light i, div.light span { color: #808285; }
+div.light p.large, div.light a.large, div.light i.large, div.light span.large { color: #0F6688; }
+div.light p.large > span, div.light a.large > span, div.light i.large > span, div.light span.large > span { color: white; background-color: #0F6688; }
+div.light i { color: #0F6688; }
+div.light button { background: #E6E7E8; color: #4D4D4F; transition: all 200ms; }
+div.light button i { color: #4D4D4F; transition: all 200ms; }
+div.light button:hover { background: #0F6688; color: white; }
+div.light button:hover i { color: white; }
+div.light div.box, div.light div.highlight { background: #E6E7E8; }
+
+div.gray { background-color: #E6E7E8; }
+div.gray h1, div.gray h2, div.gray h3, div.gray h4, div.gray h5, div.gray h6 { color: #0F6688; }
+div.gray p, div.gray a, div.gray span { color: #606265; }
+div.gray i { color: #0F6688; }
+div.gray button { background: white; color: #4D4D4F; transition: all 200ms; }
+div.gray button i { color: #4D4D4F; transition: all 200ms; }
+div.gray button:hover { background: #0F6688; color: white; }
+div.gray button:hover i { color: white; }
+div.gray div.box, div.gray div.highlight { background: #FFFFFF; }
+
+div.dark { background-color: #0F6688; }
+div.dark h1, div.dark h2, div.dark h3, div.dark h4, div.dark h5, div.dark h6 { color: white; }
+div.dark p, div.dark a, div.dark i, div.dark span { color: white; }
+div.dark button { background: #17739A; color: white; transition: all 200ms; }
+div.dark button i { color: white; }
+div.dark button:hover { background: #228FBD; }
+
+div.darker { background-color: #00425C; }
+div.darker h1, div.darker h2, div.darker h3, div.darker h4, div.darker h5, div.darker h6 { color: white; }
+div.darker p, div.darker a, div.darker i, div.darker span { color: white; }
+div.darker button { background: #17739A; color: white; transition: all 200ms; }
+div.darker button i { color: white; }
+div.darker button:hover { background: #228FBD; }
+
+div.warn { background-color: #D30000; }
+div.warn h1, div.warn h2, div.warn h3, div.warn h4, div.warn h5, div.warn h6 { color: white; }
+div.warn p, div.warn a, div.warn i, div.warn span { color: white; }
+
+div.page { width: 100%; }
+
+p.large, span.large, i.large {
+	font-size: 100px;
+	font-weight: bold;
+}
+
+p.medium, span.medium, i.medium {
+	font-size: 48px;
+}
+
+
+div.wrapper {
+	width: 70%;
+	padding: 0 15%;
+	overflow: visible;
+}
+
+button {
+	border: none;
+	padding: 16px 32px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+div.stack {
+	width: 100%;
+	display: block;
+	font-family: Eau;
+}
+
+div.stack div.element {
+	position: relative;
+	width: 100%;
+	padding: 10% 0;
+	background-position-x: center;
+	background-size: cover;
+}
+
+div.stack div.element img.bg-img {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	top: -100px;
+	z-index: -1;
+}
+
+div.panel.box {
+	width: 90%;
+	padding: 5%;
+	border-radius: 5px;
+}
+
+div.panel > div.title {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 5%;
+}
+div.panel > div.title i.indicator { display: none; float: right; }
+div.panel > div.content { width: 100%; display: flex; justify-content: space-between; }
+
+/* NAVBAR */
+
+nav.navigation {
+	position: absolute;
+	background: transparent;
+	width: 100%;
+	color: white;
+	font-family: Eau;
+	z-index: 1;
+	display: none;
+}
+
+nav.navigation a {
+	float: left;
+	color: white;
+	text-align: center;
+	padding: 20px 18px;
+	text-decoration: none;
+	font-size: 16px;
+	transition: background-color 0.2s, border-top 0.5s;
+	border-top: transparent solid 3px;
+}
+
+nav.navigation a:hover {
+	border-top: white solid 3px;
+}
+
+nav.navigation a.active {
+	background-color: #00536D;
+	font-weight: bold;
+}
+
+nav.navigation a.bars { display: none; }
+
+nav.navigation a.title {
+	font-weight: bold;
+	cursor: pointer;
+}
+nav.navigation a.title:hover { background-color: transparent; }
+
+nav.navigation a.status { cursor: default; }
+nav.navigation a.open { color: #0f0; }
+nav.navigation a.closed { color: #f00; }
+
+nav.navigation div.right {
+	float: right;
+}
+
+nav.navigation i.fas { font-size: 14px; }
+
+/* HEADER */
+
+header {
+	position: relative;
+	display: flex;
+	width: 100%;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+header div.text {
+	display: flex;
+	width: 100%;
+	font-family: Eau;
+	font-size: 32px;
+	color: white;
+	z-index: 0;
+}
+
+header div.text h1 { font-size: 120px; }
+header div.text h4 { font-weight: normal; }
+
+@keyframes hd-ind-idle {
+	0% { margin-bottom: 30px; }
+	50% { margin-bottom: 0px; }
+	100% { margin-bottom: 30px; }
+}
+
+header div.indicator {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	text-align: center;
+	color: white;
+	font-size: 64px;
+	animation: hd-ind-idle 1s infinite;
+}
+
+header div.indicator i { display: none; }
+
+/* FOOTER */
+
+footer {
+	width: 100%;
+	color: white;
+	background-color: #0F6688;
+	padding: 100px 0;
+}
+
+footer div.lowermenu { width: 100%; }
+
+footer div.lowermenu div.wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+}
+
+footer div.lowermenu div.menu { width: 100%; }
+
+
+footer div.lowermenu div.menu > div {
+	display: flex;
+	justify-content: right;
+	flex-flow: row wrap;
+}
+
+footer div.lowermenu div.menu > div > div {
+	display: flex;
+	width: 20%;
+	line-height: 20px;
+}
+
+footer div.menu ul { list-style-type: none; }
+
+footer div.menu ul li {
+	padding: 10px 0;
+	font-family: Eau;
+	font-size: 16px;
+}
+
+footer div.menu ul li a {
+	color: white;
+	text-decoration: none;
+}
+
+footer div.menu ul li a:hover {	text-decoration: underline; }
+
+footer div.menu ul li.title { font-weight: bold; }
+
+footer div.logos { padding: 0 60px 0 0; }
+
+footer div.logos div.holder { text-align: center; }
+
+footer img.logo { width: 100%; }
+
+div.bottom {
+	font-family: Eau;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 20px;
+	padding-top: 60px;
+}
+
+div.bottom div.wrapper { text-align: center; }
+
+div.bottom span {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+div.presents {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+}
+
+div.presents div.item {
+	display: flex;
+	flex-direction: column;
+}
+
+div.presents div.item div.icon {
+	overflow: visible;
+	padding: 0 0 20px 0;
+	font-size: 64px;
+	color: #808285;
+}
+
+div.presents div.item div.title {
+	color: #0F6688;
+	padding-bottom: 15px;
+}
+
+div.presents div.item div.text {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+div.boxes {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+}
+
+div.boxes > a { text-decoration: none; }
+
+div.boxes div.box {
+	display: flex;
+	flex-flow: column;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+div.boxes div.box div.image {
+	height: 0;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+}
+
+div.boxes div.box div.image img {
+	width: 100%;
+	transition: all 0.25s;
+}
+
+div.boxes div.box:hover div.image img { transform: scale(1.2); }
+
+div.boxes div.box div.text {
+	width: 80%;
+	padding: 10%;
+}
+
+div.boxes div.box div.text h3 { padding-bottom: 10px; }
+
+
+@media only screen and (max-width: 1200px) {
+	div.wrapper {
+		width: 94%;
+		padding: 0 3%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	p.large, span.large, i.large { font-size: 56px; font-weight: bold; }
+	p.medium, span.medium, i.medium { font-size: 24px; }
+
+	div.wrapper {
+		width: 90%;
+		padding: 0 5%;
+	}
+
+	nav.navigation div.wrapper {
+		width: 100%;
+		padding: 0 0;
+		margin-left: 0px;
+	}
+
+	nav.navigation div.menu a { padding: 20px 18px; }
+
+
+	header div.text div.wrapper { text-align: center; }
+	header div.text div.wrapper h1 { font-size: 100px; }
+
+
+	footer div.lowermenu div.wrapper { flex-direction: column; }
+	footer div.lowermenu div.logos { padding: 60px 0 0 0; }
+	footer div.lowermenu div.logos img { width: 50%; }
+
+	div.stack div.element { padding: 50px 0; }
+}
+
+@media only screen and (max-width: 624px) {
+	div.stack div.element { padding: 10% 0; }
+
+	nav.navigation a.bars { display: block; }
+	nav.navigation .hide-btn { display: none; }
+
+	div.menu-btn {
+		background: #00425C;
+		position: relative;
+		width: 100%;
+	}
+
+	nav.navigation div.menu-btn a {
+		width: 100%;
+		padding: 20px 24px;
+		text-align: left;
+	}
+
+	header div.text div.wrapper h1 { font-size: 50px; }
+	header div.text div.wrapper h2 { font-size: 30px; }
+
+	footer div.lowermenu div.menu > div > div {
+		width: 80%;
+		padding: 0 10%;
+	}
+
+	footer div.lowermenu div.logos img { width: 80%; }
+
+	footer div.bottom div.wrapper {
+		width: 80%;
+		padding: 0 10%;
+	}
+
+	div.panel.toggle > div.content { display: none; }
+	div.panel > div.title i.indicator { display: block; }
+
+	div.presents div.item { width: 100%; margin-bottom: 10%; }
+	div.presents div.item:last-of-type { margin-bottom: 0; }
+	div.presents div.item div.icon { text-align: center; }
+	div.presents div.item div.title { text-align: center; }
+
+	div.highlights div.highlight { width: 100%; flex-direction: column; }
+	div.highlights div.highlight > div { width: 100%; }
+	div.highlights > a { width: 100%; padding-bottom: 2%; }
+	div.highlights > a:last-child { margin-bottom: 0; }
+
+	div.boxes div.box { width: 100%; margin-bottom: 30px; }
+	div.boxes div.box:last-child { margin-bottom: 0; }
+	div.boxes > a { width: 100%; margin-bottom: 30px; }
+	div.boxes > a:last-child { margin-bottom: 0; }
+}

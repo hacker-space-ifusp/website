@@ -1,0 +1,29 @@
+{
+	"title": "Aleph Online",
+	"description": "MMORPG simples para browser.",
+	"links": {
+		"github": {
+			"text": "GitHub",
+			"link": "https://github.com/ivfreire/aleph"
+		}
+	},
+	"year": "2021",
+	"developers": [
+		{
+			"name": "Icaro Freire",
+			"role": "Programming and Game-Logic"
+		}
+	],
+	"platforms": [
+		{
+			"platform": "browser",
+			"link": "#"
+		}
+	],
+	"built-with": [ "js" ],
+	"tags": [ "2D", "RPG", "Top-down" ],
+	"images": {
+	},
+	"status": "under-development",
+	"id": "aleph"
+}

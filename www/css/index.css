@@ -1,0 +1,230 @@
+header div#particles-js { background-color: #00425C; }
+
+header { height: 100vh; }
+
+header div#particles-js {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	left: -0vw;
+}
+
+header div.text {
+	position: absolute;
+	top: 55vh;
+}
+header div.text div.wrapper { text-align: left; }
+header div.text h4 { font-family: Cantarell, Eau; }
+
+div.page { z-index: 2; }
+
+div#socials { padding: 5% 0; }
+div#socials ul {
+	display: flex;
+	flex-flow: row;
+	list-style-type: none;
+	justify-content: space-evenly;
+}
+div#socials ul li {
+	background: transparent;
+	padding: 32px;
+	border-radius: 10px;
+	transition: 0.2s all;
+}
+div#socials ul li:hover { background: #228FBD; }
+div#socials ul i { font-size: 64px; }
+
+div#highlights {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+	overflow: hidden;
+}
+div#highlights a {
+	width: 30%;
+	text-decoration: none;
+}
+div#highlights a > div {
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+	background: transparent;
+}
+div#highlights a div > div {
+	display: flex;
+	width: 100%;
+}
+div#highlights div div.info {
+	flex-flow: column;
+	justify-content: center;
+}
+div#highlights div div.info h3 { margin: 15px 0; }
+div#highlights div div.image {
+	overflow: hidden;
+	border-radius: 10px;
+}
+div#highlights div div.image img {
+	width: 100%;
+	transition: all 0.25s;
+}
+div#highlights div:hover div.image img { transform: scale(1.2); }
+
+
+div#groups { padding: 5% 0; }
+div#groups ul {
+	width: 100%;
+	display: flex;
+	list-style-type: none;
+	justify-content: space-evenly;
+}
+div#groups ul a { width: 15%; }
+div#groups ul li {
+	background: transparent;
+	border-radius: 10px;
+	transition: 0.2s all;
+}
+div#groups ul li:hover { background: white; }
+div#groups ul li img {
+	width: 100%;
+}
+
+div#activities div.holder {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+}
+div#activities div.holder > div {
+	display: flex;
+	width: 32%;
+	cursor: default;
+}
+div#activities div.holder > div > div {
+	width: 100%;
+}
+div#activities div.holder > div div.image i { transition: all 300ms; }
+div#activities div.holder > div:hover div.image i {
+	color: white;
+	transform: scale(1.1);
+}
+div#activities div.holder > div#gamedev:hover div.image {
+	background-color: rgba(0, 0, 0, 0);
+	text-shadow: 0 10px 0 #bbb;
+	background-size: cover;
+}
+div#activities div.holder > div#robotics:hover div.image {
+	background-color: #00878F;
+	text-shadow: 0 10px 0 #00777F;
+}
+div#activities div.holder > div#courses:hover div.image {
+	background-color: #C41313;
+	text-shadow: 0 10px 0 #940000;
+}
+div#activities div.holder > div#gamedev div.bg {
+	background-color: #FF3F00;
+	border-radius: 10px;
+}
+div#activities div.holder > div div.image {
+	width: 100%;
+	background-color: #E6E7E8;
+	text-align: center;
+	font-size: 100px;
+	padding: 60px 0;
+	border-radius: 10px;
+	transition: all 300ms;
+}
+div#activities div.holder > div div.text div.title {
+	text-align: center;
+	padding: 5% 0;
+}
+div#activities div.holder > div div.text div.content {
+	font-size: 16px;
+	line-height: 24px;
+	color: #333;
+}
+div#activities div.holder > div div.text div.content div.more {
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+	font-weight: bold;
+}
+div#activities div.holder > div div.text div.content div.more a {
+	color: #069;
+	text-decoration: none;
+}
+div#activities div.holder > div div.text div.content div.more a:hover { text-decoration: underline; }
+div#activities div.holder > div div.text div.content div.more a:hover i { margin-left: 10px; }
+div#activities div.holder > div div.text div.content div.more a i {
+	color: #069;
+	transition: all 100ms;
+}
+
+div.presents#goals > div {
+	width: 24%;
+	text-align: center;
+}
+
+div.container#coffee {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+div.container#coffee > div.left { width: 45% }
+div.container#coffee > div.right { width: 45%; }
+div.container#coffee > div.left img { width: 100%; }
+
+div.presents#intro div.item { width: 45%; }
+div.presents#intro div.item i { font-size: 128px; } 
+div.presents#intro div.item div.icon {
+	text-align: center;
+	padding: 10% 0;
+}
+div.presents#intro div.item div.text { text-align: justify; }
+
+div#lately > div.holder {
+	display: flex;
+	justify-content: space-between;
+}
+div#lately > div.holder div.box {
+	background: transparent;
+	width: 24%;
+	cursor: pointer;
+}
+div#lately > div.holder div.box div.image {
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+	border-radius: 10px;
+	margin-bottom: 10%;
+}
+div#lately > div.holder div.box div.image img {
+	width: 100%;
+	border-radius: 0;
+	transition: all 250ms;
+}
+div#lately > div.holder div.box:hover div.image img { transform: scale(1.2); }
+div#lately > div.holder div.box div.text h2, div#lately > div.holder div.box div.text p {
+	font-size: 24px;
+	margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+	div.presents#goals > div { width: 40%; }
+	div.presents#goals > div:first-child { padding: 0 0 60px 0; }
+
+	div#activities div.holder > div div.image { font-size: 100px; }
+}
+
+@media only screen and (max-width: 624px) {
+	div.presents#goals div.item { width: 100%; }
+
+	div.highlights#highlights div.highlight { flex-direction: column-reverse; }
+
+	div#activities div.holder > div { width: 100%; margin-bottom: 30px; }
+	div#activities div.holder > div:last-child { margin-bottom: 0; }
+	div#activities div.holder > div div.image { font-size: 100px; }
+}

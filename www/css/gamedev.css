@@ -1,0 +1,242 @@
+:root {
+	--theme-color: #18a3df;
+}
+
+body { display: block; }
+
+div.dark { background: #2D2D2F; }
+div.dark h1, div.dark h2, div.dark h3, div.dark h4, div.dark h5, div.dark h6 { color: white; }
+div.dark p, div.dark a, div.dark i, div.dark span { color: white; }
+div.dark button { background: #17739A; color: white; transition: all 200ms; }
+div.dark button i { color: white; }
+div.dark button:hover { background: #228FBD; }
+div.dark div.box, div.dark div.highlight { background: #4D4D4F; }
+div.dark button { background-color: #ff3f00; }
+div.dark button:hover { background-color: #cc0c00; }
+
+div.darker { background: #130F10; }
+div.darker h1, div.darker h2, div.darker h3, div.darker h4, div.darker h5, div.darker h6 { color: white; }
+div.darker p, div.darker a, div.darker i, div.darker span { color: white; }
+div.darker button { background: #17739A; color: white; transition: all 200ms; }
+div.darker button i { color: white; }
+div.darker button:hover { background: #228FBD; }
+div.darker div.box, div.darker div.highlight { background: #4D4D4F; }
+div.darker button { background-color: #ff3f00; }
+div.darker button:hover { background-color: #cc0c00; }
+
+div.panel > div.title h2 { font-size: 42px; }
+
+nav.navigation a { transition: all 0.2s; }
+nav.navigation a:hover { color: var(--theme-color); border-color: var(--theme-color);}
+
+/** EXTRAS **/
+
+body { display: none; }
+
+nav.navigation { background: transparent; }
+
+header {
+	height: 70vh;
+	background-color: #231F20;
+	background-image: url('../images/headers/gamedev.jpg');
+	background-size: cover;
+	/* background-attachment: fixed; */
+	background-position-y: top;
+	box-shadow: inset black 0 -100px 300px;
+}
+
+header div.text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+header div.text div.wrapper { width: 100%; }
+
+header div.text span { 
+	text-transform: uppercase;
+	font-size: 22px;
+	letter-spacing: 1px;
+	font-weight: lighter;
+}
+header div.text h1 {
+	font-size: 96px;
+	line-height: 96px;
+	padding: 0 0 0 0;
+	text-shadow: #232323 0px 5px 0;
+}
+header div.text p {
+	font-size: 22px;
+	font-weight: lighter;
+	padding: 30px 0;
+}
+header div.text button {
+	background-color: transparent;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	border: 2px solid white;
+	padding: 10px 16px;
+	transition: all 0.2s;
+}
+
+header div.text button:hover {
+	border-color: var(--theme-color);
+	color: var(--theme-color);
+	text-shadow: #000000 0 2px 0;
+	transform: translateY(-5px);
+}
+
+footer { background: #4D4D4D; }
+
+/** PAGE **/
+
+div.presents#intro div.item {
+	width: 30%;
+	text-align: center;
+}
+
+div.presents#intro div.item#gamedev div.title h2, div.presents#intro div.item#gamedev div.icon i {
+	background: linear-gradient(-130deg,#ff0000, #6b230a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+div.presents#intro div.item#contribution div.title h2, div.presents#intro div.item#contribution div.icon i {
+	background: linear-gradient(-1300deg,#00ff00, #075007);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+div.presents#intro div.item#tools div.title h2, div.presents#intro div.item#tools div.icon i {
+	background: linear-gradient(-1300deg,#0000ff, #0e0e7c);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+div.presents#recents a { width: 24%; }
+
+div.presents#recents a div.item {
+	width: 100%;
+	border: 2px solid transparent;
+	border-radius: 10px;
+	transition: all 0.2s;
+}
+
+div.presents#recents a div.item:hover {
+	border: 2px solid var(--theme-color);
+	transform: translateY(-16px);
+	box-shadow: #000 0 0 30px;
+}
+
+div.presents#recents a div.item:hover div.image img { left: 0%; }
+
+div.presents#recents a div.item div.image {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 150%;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+div.presents#recents div.item div.image img {
+	position: absolute;
+	left: -50%;
+	height: 100%;
+	border-radius: 0;
+	transition: left 0.2s;
+}
+
+div.element#activities {
+	background-image: url('../images/headers/team.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+div#library a { text-decoration: none; }
+
+div#library ul {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	list-style-type: none;
+}
+
+div#library ul li {
+	width: 32%;
+	margin-bottom: 20px;
+	transition: all 250ms;
+}
+
+
+div#library ul li:hover { transform: translateY(-10px); }
+div#library ul li:hover div { border: 2px solid var(--theme-color); }
+div#library ul li:hover span { color: var(--theme-color); }
+
+div#library ul li div {
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.75%;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	border: 2px solid transparent;
+	transition: all 250ms;
+}
+
+div#library ul li img { width: 110%; }
+
+div#library ul li span {
+	color: white;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: all 250ms;
+}
+
+div#soon {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+div#soon div {
+	display: flex;
+	overflow: hidden;
+	width: 49%;
+	background: #4D4D4D;
+	border-radius: 10px;
+}
+
+div#soon div div.image { border-radius: 0; width: 40%; }
+div#soon div div.text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	padding: 5%;
+}
+
+div#soon div div.image img {
+	width: 100%;
+	border-radius: 0;
+}
+
+
+div#soon div div.text span {
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 14px;
+}
+
+/** MEDIA CTL **/
+
+@media only screen and (max-width: 800px) {
+	header {
+		background-image: url('../images/headers/gamedev_mobile.jpg');
+		background-size: 100vw auto;
+		background-position-y: center;
+	}
+}
+
+@media only screen and (max-width: 624px) {
+	div.presents#intro div.item { width: 100%; }
+	div.presents#intro div.item:last-child { margin-bottom: 0; }
+}
